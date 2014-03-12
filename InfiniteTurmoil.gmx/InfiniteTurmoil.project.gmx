@@ -5,24 +5,36 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\mainMenuSong</sound>
+    <sound>sound\MainMenuTheme</sound>
   </sounds>
   <sprites name="sprites">
+    <sprites name="Menu Items">
+      <sprite>sprites\PlayButton</sprite>
+    </sprites>
+    <sprites name="GUI Objects">
+      <sprite>sprites\LifeGauge</sprite>
+    </sprites>
     <sprites name="Objects"/>
-    <sprite>sprites\test</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\mainMenu</background>
+    <background>background\MainMenu</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Menu Items">
-      <object>objects\mainMenuTheme</object>
+      <object>objects\Play_Button</object>
     </objects>
+    <objects name="GUI Objects">
+      <object>objects\Life_Gauge</object>
+    </objects>
+    <objects name="Objects"/>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Intro_Screen</room>
     <room>rooms\Main_Menu_Screen</room>
+    <room>rooms\Intro</room>
+    <rooms name="In Game">
+      <room>rooms\test</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
