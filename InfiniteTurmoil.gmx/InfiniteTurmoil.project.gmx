@@ -8,24 +8,32 @@
     <sound>sound\MainMenuTheme</sound>
   </sounds>
   <sprites name="sprites">
+    <sprites name="GUI Objects">
+      <sprite>sprites\LifeGauge</sprite>
+    </sprites>
     <sprites name="Menu Items">
       <sprite>sprites\PlayButton</sprite>
     </sprites>
-    <sprites name="GUI Objects">
-      <sprite>sprites\LifeGauge</sprite>
+    <sprites name="Mobs">
+      <sprite>sprites\PlayableCharacter</sprite>
+      <sprite>sprites\BoxObject</sprite>
     </sprites>
     <sprites name="Objects"/>
   </sprites>
   <backgrounds name="background">
-    <background>background\MainMenu</background>
+    <background>background\MainMenuScreen</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <objects name="GUI Objects">
+      <object>objects\Life_Gauge</object>
+    </objects>
     <objects name="Menu Items">
       <object>objects\Play_Button</object>
     </objects>
-    <objects name="GUI Objects">
-      <object>objects\Life_Gauge</object>
+    <objects name="Mobs">
+      <object>objects\Playable_Character</object>
+      <object>objects\Box_Object</object>
     </objects>
     <objects name="Objects"/>
   </objects>
