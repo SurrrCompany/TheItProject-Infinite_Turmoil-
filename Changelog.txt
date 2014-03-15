@@ -1,0 +1,22 @@
+3/14/2014 10:21 PM
+
+Renames all files to proper system
+
+Added Exit Button
+Added Stone House
+Added a Path
+Added Test Enemy
+Added Bullets
+Added spawntown room
+Added Health
+
+Removed test1 room
+Removed box object
+
+Left Clicking lets you shoot to where you point
+Made Test Enemy Shoot you
+Bullets do damage to test enemy and you
+Increased health for both mobs
+(Test enemy DOES have a ton of health)
+Made the room reset when your health reaches 0
+(Not the indicator, your actual variable)

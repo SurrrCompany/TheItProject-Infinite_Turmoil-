@@ -5,43 +5,59 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\MainMenuTheme</sound>
+    <sound>sound\snd_MainMenuTheme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="GUI Objects">
-      <sprite>sprites\LifeGauge</sprite>
+      <sprite>sprites\spr_LifeGauge</sprite>
     </sprites>
     <sprites name="Menu Items">
-      <sprite>sprites\PlayButton</sprite>
+      <sprite>sprites\spr_PlayButton</sprite>
+      <sprite>sprites\spr_ExitButton</sprite>
     </sprites>
     <sprites name="Mobs">
-      <sprite>sprites\PlayableCharacter</sprite>
-      <sprite>sprites\BoxObject</sprite>
+      <sprite>sprites\spr_PlayableCharacter</sprite>
+      <sprite>sprites\spr_BrownBox</sprite>
     </sprites>
-    <sprites name="Objects"/>
+    <sprites name="Objects">
+      <sprite>sprites\spr_bullet</sprite>
+    </sprites>
+    <sprites name="Buildings">
+      <sprite>sprites\spr_StoneHouse1</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\MainMenuScreen</background>
+    <background>background\bkgnd_MainMenuScreen</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path_rm_spawntownTest1</path>
+  </paths>
+  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="GUI Objects">
-      <object>objects\Life_Gauge</object>
+      <object>objects\obj_LifeGauge</object>
     </objects>
     <objects name="Menu Items">
-      <object>objects\Play_Button</object>
+      <object>objects\obj_PlayButton</object>
+      <object>objects\obj_ExitButton</object>
     </objects>
     <objects name="Mobs">
-      <object>objects\Playable_Character</object>
-      <object>objects\Box_Object</object>
+      <object>objects\obj_PlayableCharacter</object>
+      <object>objects\obj_TestEnemy</object>
     </objects>
-    <objects name="Objects"/>
+    <objects name="Objects">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_bulletEnemy</object>
+    </objects>
+    <objects name="Buildings">
+      <object>objects\obj_StoneHouse1</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Main_Menu_Screen</room>
-    <room>rooms\Intro</room>
+    <room>rooms\rm_MainMenuScreen</room>
+    <room>rooms\rm_Intro</room>
     <rooms name="In Game">
-      <room>rooms\test</room>
+      <room>rooms\rm_spawntown</room>
     </rooms>
   </rooms>
   <help>
