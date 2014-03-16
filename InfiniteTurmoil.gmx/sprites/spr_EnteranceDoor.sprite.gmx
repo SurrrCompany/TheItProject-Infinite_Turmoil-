@@ -7,18 +7,18 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>8</bbox_right>
-  <bbox_top>2</bbox_top>
-  <bbox_bottom>6</bbox_bottom>
+  <bbox_right>35</bbox_right>
+  <bbox_top>1</bbox_top>
+  <bbox_bottom>69</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>9</width>
-  <height>9</height>
+  <width>36</width>
+  <height>70</height>
   <frames>
-    <frame index="0">images\spr_bullet_0.png</frame>
+    <frame index="0">images\spr_EnteranceDoor_0.png</frame>
   </frames>
 </sprite>

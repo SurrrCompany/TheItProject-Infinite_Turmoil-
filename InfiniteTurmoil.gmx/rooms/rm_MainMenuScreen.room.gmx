@@ -10,7 +10,9 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>audio_play_sound(snd_MainMenuTheme, 1, true);</code>
+  <code>audio_stop_sound(snd_MainMenuTheme);
+health = 10;
+audio_play_sound(snd_MainMenuTheme, 1, true);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <makerSettings>

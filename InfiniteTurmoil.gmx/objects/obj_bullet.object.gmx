@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_TestEnemy">
+    <event eventtype="4" ename="obj_StoneHouse1">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -47,7 +47,23 @@
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_StoneHouse1">
+    <event eventtype="4" ename="RandomPathAI">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_TestEnemy">
       <action>
         <libid>1</libid>
         <id>203</id>

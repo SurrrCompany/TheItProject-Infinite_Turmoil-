@@ -10,6 +10,8 @@
   <sprites name="sprites">
     <sprites name="GUI Objects">
       <sprite>sprites\spr_LifeGauge</sprite>
+      <sprite>sprites\spr_EnemyLifeGauge</sprite>
+      <sprite>sprites\inventory</sprite>
     </sprites>
     <sprites name="Menu Items">
       <sprite>sprites\spr_PlayButton</sprite>
@@ -18,24 +20,30 @@
     <sprites name="Mobs">
       <sprite>sprites\spr_PlayableCharacter</sprite>
       <sprite>sprites\spr_BrownBox</sprite>
+      <sprite>sprites\spr_SeagullForce1</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_bullet</sprite>
     </sprites>
     <sprites name="Buildings">
       <sprite>sprites\spr_StoneHouse1</sprite>
+      <sprite>sprites\spr_road</sprite>
+      <sprite>sprites\spr_EnteranceDoor</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgnd_MainMenuScreen</background>
+    <background>background\bkgnd_grass</background>
+    <background>background\bkgnd_path</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path_rm_spawntownTest1</path>
   </paths>
-  <fonts name="fonts"/>
   <objects name="objects">
     <objects name="GUI Objects">
       <object>objects\obj_LifeGauge</object>
+      <object>objects\obj_EnemyHealth</object>
+      <object>objects\obj_inventory</object>
     </objects>
     <objects name="Menu Items">
       <object>objects\obj_PlayButton</object>
@@ -44,6 +52,7 @@
     <objects name="Mobs">
       <object>objects\obj_PlayableCharacter</object>
       <object>objects\obj_TestEnemy</object>
+      <object>objects\RandomPathAI</object>
     </objects>
     <objects name="Objects">
       <object>objects\obj_bullet</object>
@@ -51,6 +60,8 @@
     </objects>
     <objects name="Buildings">
       <object>objects\obj_StoneHouse1</object>
+      <object>objects\obj_road</object>
+      <object>objects\obj_GoldRimDoor</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -58,6 +69,7 @@
     <room>rooms\rm_Intro</room>
     <rooms name="In Game">
       <room>rooms\rm_spawntown</room>
+      <room>rooms\test1</room>
     </rooms>
   </rooms>
   <help>

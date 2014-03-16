@@ -11,81 +11,113 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>119</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if distance_to_object(obj_PlayableCharacter)&lt;10000
+{
+move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_EnemyHealth</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>enemyhealth1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1000</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_path</functionname>
+        <functionname>action_another_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>8</kind>
-            <path>path_rm_spawntownTest1</path>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>7</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <kind>11</kind>
+            <room>rm_MainMenuScreen</room>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>321</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_message</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>enemyhealth</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>500</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>clock</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>2</kind>
+            <string>You Win!!!</string>
           </argument>
         </arguments>
       </action>
@@ -107,11 +139,44 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if not collision_line(obj_TestEnemy.x, obj_TestEnemy.y, obj_PlayableCharacter.x, obj_PlayableCharacter.y, obj_StoneHouse1, true, true)
+            <string>if not collision_line(RandomPathAI.x, RandomPathAI.y, obj_PlayableCharacter.x, obj_PlayableCharacter.y, obj_StoneHouse1, true, true)
 {
-instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
+instance_create(self.x+16, self.y+12, obj_bulletEnemy)
 }
+
+
+if distance_to_object(obj_PlayableCharacter)&lt;250
+{
+move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 1)
+}
+else
+{
+move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
+}
+
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_StoneHouse1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -133,11 +198,11 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth - 1</string>
+            <string>enemyhealth1 - 1</string>
           </argument>
         </arguments>
       </action>
@@ -157,7 +222,7 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -182,55 +247,6 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>obj_EnemyHealth</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index += 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>201</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>obj_GoldRimDoor</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>self.x</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>self.y</string>
-          </argument>
-        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -276,11 +292,11 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>450</string>
+            <string>900</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -353,7 +369,315 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>800</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_EnemyHealth</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index += 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>enemyhealth1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>700</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_EnemyHealth</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index += 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>enemyhealth1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>600</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_EnemyHealth</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index += 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>enemyhealth1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>500</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>obj_EnemyHealth</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_index += 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -430,84 +754,7 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>350</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>obj_EnemyHealth</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index += 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -584,84 +831,7 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>250</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>obj_EnemyHealth</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index += 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -738,165 +908,11 @@ instance_create(obj_TestEnemy.x+16, obj_TestEnemy.y+12, obj_bulletEnemy);
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>enemyhealth</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>150</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>obj_EnemyHealth</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index += 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>enemyhealth</string>
+            <string>enemyhealth1</string>
           </argument>
           <argument>
             <kind>0</kind>
             <string>100</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>obj_EnemyHealth</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>image_index += 1;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>enemyhealth</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>50</string>
           </argument>
           <argument>
             <kind>4</kind>
