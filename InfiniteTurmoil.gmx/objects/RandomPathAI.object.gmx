@@ -75,54 +75,102 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1000</string>
+            <string>10</string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
-        <id>224</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_another_room</functionname>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>11</kind>
-            <room>rm_MainMenuScreen</room>
+            <kind>1</kind>
+            <string>enemyclock1</string>
           </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>321</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_message</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
           <argument>
-            <kind>2</kind>
-            <string>You Win!!!</string>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>enemyclock1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>enemyclock1 + 1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>enemyclock1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>7</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -142,10 +190,66 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
             <string>if not collision_line(RandomPathAI.x, RandomPathAI.y, obj_PlayableCharacter.x, obj_PlayableCharacter.y, obj_StoneHouse1, true, true)
 {
 instance_create(self.x+16, self.y+12, obj_bulletEnemy)
-}
-
-
-if distance_to_object(obj_PlayableCharacter)&lt;250
+}  
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>enemyclock1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if distance_to_object(obj_PlayableCharacter)&lt;250
 {
 move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 1)
 }
@@ -296,7 +400,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>900</string>
+            <string>9</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -373,7 +477,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>800</string>
+            <string>8</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -450,7 +554,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>700</string>
+            <string>7</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -527,7 +631,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>600</string>
+            <string>6</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -604,7 +708,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>500</string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -681,7 +785,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>400</string>
+            <string>4</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -758,7 +862,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>300</string>
+            <string>3</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -835,7 +939,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>200</string>
+            <string>2</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -912,7 +1016,7 @@ move_towards_point(obj_PlayableCharacter.x, obj_PlayableCharacter.y, 3)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>100</string>
+            <string>1</string>
           </argument>
           <argument>
             <kind>4</kind>

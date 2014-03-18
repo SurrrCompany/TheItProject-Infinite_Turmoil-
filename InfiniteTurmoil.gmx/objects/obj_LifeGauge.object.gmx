@@ -26,6 +26,26 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0;
+if health == 10
+image_index = 0;
+if health == 9
+image_index = 1;
+if health == 8
+image_index = 2;
+if health == 7
+image_index = 3;
+if health == 6
+image_index = 4;
+if health == 5
+image_index = 5;
+if health == 4
+image_index = 6;
+if health == 3
+image_index = 7;
+if health == 2
+image_index = 8;
+if health == 1
+image_index = 9;
 </string>
           </argument>
         </arguments>
@@ -48,7 +68,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if health == 11
+            <string>if health == 10
 image_index = 0;
 if health == 9
 image_index = 1;
@@ -71,6 +91,7 @@ image_index = 9;
 if health == 0
 {
 image_index = 10;
+health = 10;
 room_restart();
 }
 </string>

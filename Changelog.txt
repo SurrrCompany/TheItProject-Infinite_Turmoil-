@@ -1,7 +1,30 @@
+3/18/14 5:35 PM - v0.0.0.4
+
+Changed the PlayableCharacter sprite
+Changed Bullet Structure
+Changed Bullet Texture
+Changed Fire Rate
+Changed Spawn Location of the golden rimmed door
+Changed Health Structure
+	Changed Health for both enemys
+	Changed Health for player
+	Health count from the first room continues into the second room
+
+Modified the aiming of both mobs (Can Miss)
+Modified the ingame rooms
+
+Added Invisable objects 
+Added Ammo Count
+Added Ammo Boxes
+Added Directional sprite for bullet
+Added an Icon (Probably Temp)
+Added Several More RandomPathAI's to the second room
+
+Moved Health classes into the health object
+
+Removed Health Counted from the second room
 
 3/15/13 10:43 PM - v0.0.0.3
-
-Changed Path AI
 
 Added New Room
 Added LoS
@@ -11,6 +34,7 @@ Added GoldenDoor
 Added Road
 Added Grass
 
+Changed Path AI
 Changed Bullet Texture
 
 Removed Right Click Cheat
